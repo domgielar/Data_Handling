@@ -11,7 +11,17 @@ x = {"Student":["David", "Samuel", "Terry", "Evan"],
 df = pd.DataFrame(x)
 
 marks = df[["Marks"]]
-marks
+print(marks)
 
 cc = df[["Country","Course"]]
-cc
+print(cc)
+
+df2 = df
+df2 = df2.set_index("Student")
+#print(df2.head())
+
+print(df2.loc["David", "Age"])
+
+print(df2.loc["David", "Marks"])
+
+print(df2.loc["David":"Terry", "Course": "Marks"])
